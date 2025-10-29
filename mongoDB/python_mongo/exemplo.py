@@ -2,7 +2,7 @@ import pandas as pd
 from  pymongo import MongoClient
 
 #* conectando com o Mongo
-client = MongoClient("mongodb://localhost:27017")
+'''client = MongoClient("mongodb://localhost:27017")
 db = client["Teste"]
 collection = db["Baseball"]
 
@@ -17,4 +17,6 @@ except Exception as e:
     print(f"Erro na importação: {e}")
 
 finally:
-    client.close()
+    client.close()'''
+
+
