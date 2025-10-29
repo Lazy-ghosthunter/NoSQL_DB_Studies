@@ -50,5 +50,12 @@ use('Fatec')
     {Salario:{$lte:2000}},
     {$set:{ Salario:4000}}
 );*/
+/*db.pessoas.updateMany(
+    {"Ensino Superior":true},
+    {$set:{UF:"SP"}}
+)*/
 
-
+db.pessoas.updateMany(
+    {"UF":"SP", "Ensino Superior":true},
+    {$set:{Salario:8700}}
+)
