@@ -55,7 +55,12 @@ use('Fatec')
     {$set:{UF:"SP"}}
 )*/
 
-db.pessoas.updateMany(
+/*db.pessoas.updateMany(
     {"UF":"SP", "Ensino Superior":true},
     {$set:{Salario:8700}}
-)
+)*/
+
+//! Delete
+/*db.pessoas.deleteOne(
+    {nome:"Joyce Sony"}
+)*/
