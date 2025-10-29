@@ -46,4 +46,9 @@ use('Fatec')
 );*/
 
 //! update many
-db.pessoas.updateMany()
+/*db.pessoas.updateMany(
+    {Salario:{$lte:2000}},
+    {$set:{ Salario:4000}}
+);*/
+
+
