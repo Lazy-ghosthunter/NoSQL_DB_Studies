@@ -64,3 +64,7 @@ use('Fatec')
 /*db.pessoas.deleteOne(
     {nome:"Joyce Sony"}
 )*/
+
+/*db.pessoas.deleteMany(
+    {UF:"SC"}
+)*/
