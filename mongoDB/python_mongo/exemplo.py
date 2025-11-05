@@ -44,7 +44,7 @@ db = client["Fatec"]
 collection = db['NBA']
 
 def search_mongo(field, value):
-    query = {field:{"$regex": value, "$options": "i"}}
+    query = {field:{"$regex": value, "$options":   "i"}}
     results = collection.find(query)
     return list(results)
 
