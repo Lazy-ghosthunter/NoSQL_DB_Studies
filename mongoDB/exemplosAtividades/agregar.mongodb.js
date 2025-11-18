@@ -58,7 +58,7 @@ use('Fatec')
 ]).projection({_id:0})*/
 
 //! Exemplo 5
-db.informatica.aggregate([
+/*db.informatica.aggregate([
     {
         $addFields: {
           DataISO:{
@@ -75,5 +75,83 @@ db.informatica.aggregate([
             $lte: ISODate("2024-12-31T23:59:59Z")
           }
         }
+    },
+    {
+        $addFields: {
+          valorTotal: {$multiply:["$Quantidade", "$Preço"]}
+        }
+    },
+    {
+        $group:{
+            _id:"$Material",
+            totalPreco:{ $sum: "$valorTotal"}
+        }
+    },
+    {
+        $sort:{_id:1}
+    }
+])*/
+
+//! Exemplo 6
+/*db.NBA.aggregate([
+    {$group:{ _id: "$country", Total:{ $sum: '$pts'}}},
+    {$sort:{_id:1}}
+])*/
+
+//! Exemplo 7
+/*db.NBA.aggregate([
+    {
+        $group:{
+            _id:'$college',
+            Total:{
+                $sum:'$pts'
+            }
+        }
+    },
+    {
+        $sort: {
+          _id: 1
+        }
+    }
+])*/
+
+//! Exemplo 8
+/*db.NBA.updateMany(
+    {college: "None" },
+    {$set: {college: 'FATEC'}}
+)*/
+
+//! Exemplo 9
+/*db.NBA.aggregate([
+    {$match: {
+      college:"FATEC"
+    }},
+    {
+        $count: 'TotalJogadores'
+    }
+])*/
+
+//! Exemplo 10
+/*db.NBA.aggregate([
+    {
+        $match:{
+            $or:[
+                { college: "FATEC"},
+                { college: "Harvard"}
+            ]
+        }
+    },
+    { $count: "TotalJogadores"}
+])*/
+
+//! Atividade
+
+//* a)
+db.NBA.aggregate([
+    {
+        $match:{college:"FATEC"}
+    },
+    {
+        $
     }
 ])
