@@ -206,6 +206,7 @@ use('quitanda');
 ])*/
 
 //! --------------------------------------
+//merge: cria uma nova e out atualiza uma existente ou cria se não existir
 
 /*db.pedidos.aggregate([
     {
